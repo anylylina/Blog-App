@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+
+.image {
+  object-fit: cover;
+  border-radius: $border-radius;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}

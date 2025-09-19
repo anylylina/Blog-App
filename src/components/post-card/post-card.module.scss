@@ -1,0 +1,95 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-md $spacing-xs $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  background: $color-background;
+  transition: box-shadow $transition-duration ease;
+  cursor: pointer;
+
+  height: 475px;
+  max-height: 475px;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.title {
+  margin-top: $spacing-sm;
+  font-size: $size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-foreground;
+}
+
+.text {
+  flex-grow: 1;
+  font-size: $size-md;
+  color: $color-foreground;
+  line-height: 1.4;
+  overflow-y: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    max-height: 20vh;
+    font-size: $size-md;
+  }
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  font-size: $size-xs;
+  color: $color-muted-foreground;
+  margin-top: $spacing-sm;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $size-md;
+  color: $color-muted-foreground;
+  padding: $spacing-xs 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: $size-xs;
+  max-width: 45%;
+
+  .author {
+    @include ellipsis;
+    white-space: nowrap;
+  }
+
+  .date {
+    white-space: nowrap;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-sm;
+  background-color: $color-secondary;
+  color: $color-foreground;
+  padding: $spacing-xs $spacing-sm;
+  transition: background-color $transition-duration ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.icon {
+  font-size: $size-xs;
+}

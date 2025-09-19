@@ -1,0 +1,52 @@
+@use '../../styles/variables' as *;
+
+.root {
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  margin-bottom: $spacing-sm;
+  transition: box-shadow $transition-duration ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+  padding-bottom: $spacing-xs;
+  border-bottom: 1px solid $color-border;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.author {
+  color: $color-primary;
+  font-size: $size-md;
+}
+
+.date {
+  font-size: $size-xs;
+  color: $color-muted-foreground;
+}
+
+.text {
+  margin: 0;
+  line-height: 1.4;
+  color: $color-foreground;
+  font-size: $size-md;
+}
+
+.deleteButton {
+  font-size: $size-xs;
+  padding: $spacing-xs $spacing-sm;
+  min-width: auto;
+}

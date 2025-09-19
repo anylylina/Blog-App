@@ -1,0 +1,84 @@
+@use '../../styles/variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+  width: 100%;
+}
+
+.label {
+  font-size: $size-md;
+  color: $color-foreground;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  font-size: $size-md;
+  font-family: $font-family;
+  color: $color-foreground;
+  background: $color-background;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: all $transition-duration ease-in-out;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $color-muted-foreground;
+  }
+
+  &.overLimit {
+    border-color: $color-destructive;
+
+    &:focus {
+      border-color: $color-destructive;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.charCounter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: $spacing-sm;
+  margin-left: auto;
+}
+
+.charCount {
+  font-size: $size-xs;
+  color: var$color-muted-foreground;
+  transition: color $transition-duration ease-in-out;
+
+  &.nearLimit {
+    color: $color-amber;
+  }
+
+  &.overLimit {
+    color: $color-destructive;
+  }
+}
+
+.error {
+  border-color: $color-destructive;
+}
+
+.errorMessage {
+  font-size: $size-xs;
+  color: $color-destructive;
+}

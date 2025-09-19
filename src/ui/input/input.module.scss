@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+  width: 100%;
+}
+
+.label {
+  font-size: $size-xs;
+  font-weight: $font-weight-normal;
+  color: $color-foreground;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  font-size: $size-md;
+  font-family: $font-family;
+  color: $color-foreground;
+  background: $color-background;
+  transition: all $transition-duration ease-in-out;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $color-muted-foreground;
+  }
+}
+
+.error {
+  border-color: $color-destructive;
+}
+
+.errorMessage {
+  font-size: $size-xs;
+  color: $color-destructive;
+}

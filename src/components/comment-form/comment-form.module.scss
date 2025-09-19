@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+
+.root {
+  position: relative;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  padding: $spacing-lg;
+  margin-top: $spacing-lg;
+}
+
+.title {
+  margin: 0 0 $spacing-md 0;
+  font-size: $size-lg;
+  color: $color-foreground;
+  font-weight: $font-weight-bold;
+}
+
+.field {
+  margin-bottom: $spacing-md;
+
+  &:last-of-type {
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.submitButton {
+  width: 100%;
+  justify-content: center;
+}

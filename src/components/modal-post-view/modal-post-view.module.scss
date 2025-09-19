@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: $color-foreground;
+
+  .image {
+    min-height: 400px;
+  }
+}
+
+.article {
+  padding: $spacing-lg;
+  color: $color-foreground;
+}
+
+.title {
+  font-size: $size-xl;
+}
+
+.meta {
+  display: flex;
+  gap: $spacing-lg;
+  padding-top: $spacing-sm;
+  font-size: $size-md;
+  color: $color-muted-foreground;
+}
+
+.text {
+  padding-top: $spacing-xl;
+  font-size: $size-md;
+  line-height: 1.6;
+}
+
+.comments {
+  margin-top: $spacing-md;
+}
+
+.comments h3 {
+  font-size: $size-lg;
+  margin-bottom: $spacing-sm;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: $spacing-xs;
+  color: $color-foreground;
+}
+
+.comments ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.comments li {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: $spacing-sm $spacing-sm;
+  border-radius: $spacing-xs;
+  font-size: $size-md;
+  color: #333;
+  line-height: 1.4;
+}
+
+.comments li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}

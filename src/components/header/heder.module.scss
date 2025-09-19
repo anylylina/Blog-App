@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.header {
+  border-bottom: 1px solid $color-border;
+  padding: $spacing-md 0;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $size-2xl;
+}
+
+.logo {
+  font-size: $size-2xl;
+  font-weight: $font-weight-bold;
+  color: $color-foreground;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-size: $size-2xl;
+  cursor: pointer;
+}

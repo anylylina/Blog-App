@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.root {
+  @include skeleton;
+
+  max-height: 475px;
+  height: 475px;
+}

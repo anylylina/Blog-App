@@ -1,0 +1,21 @@
+@forward './fonts';
+@forward './reset';
+
+@use './variables' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 10px;
+  font-family: $font-family;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 8px;
+  }
+}
+
+button {
+  border: none;
+  padding: 0;
+}

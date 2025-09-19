@@ -1,0 +1,60 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family;
+  font-size: $size-lg;
+  font-weight: $font-weight-normal;
+  border-radius: $border-radius;
+  padding: $spacing-sm $spacing-md;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all $transition-duration ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-secondary-foreground;
+    border: 1px solid $color-border;
+
+    &:hover {
+      background-color: color-mix(in srgb, $color-secondary 90%, black);
+    }
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,49 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-background;
+  border-top: 1px solid $border-radius;
+  padding: $spacing-sm 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: $spacing-sm;
+}
+
+.title {
+  font-size: $size-md;
+  font-weight: $font-weight-bold;
+  color: $color-foreground;
+}
+
+.nav {
+  display: flex;
+  gap: $spacing-xl;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navLink {
+  font-size: $size-md;
+  color: $color-muted-foreground;
+  transition: color $transition-duration ease;
+
+  &:hover {
+    color: $color-foreground;
+  }
+}
+
+.copyright {
+  font-size: $size-md;
+  color: $color-muted-foreground;
+  margin-top: $spacing-sm;
+  text-align: center;
+}

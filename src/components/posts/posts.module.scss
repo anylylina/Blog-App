@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  padding-top: calc($spacing-2xl * 4);
+  font-size: $size-xl;
+}

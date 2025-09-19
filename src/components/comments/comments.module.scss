@@ -1,0 +1,49 @@
+@use '../../styles/variables' as *;
+
+.root {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $color-border;
+}
+
+.title {
+  margin: 0 0 $spacing-lg 0;
+  font-size: $size-lg;
+  color: $color-foreground;
+  font-weight: $font-weight-bold;
+}
+
+.list {
+  margin-bottom: $spacing-lg;
+  padding-right: $spacing-xs;
+
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-background;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-border;
+    border-radius: 3px;
+
+    &:hover {
+      background: $color-muted-foreground;
+    }
+  }
+}
+
+.noComments {
+  text-align: center;
+  color: $color-muted-foreground;
+  font-style: italic;
+  padding: $spacing-lg;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-lg;
+}

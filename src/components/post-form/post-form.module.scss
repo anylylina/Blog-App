@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+
+.root {
+  padding: $spacing-xl;
+}
+
+.title {
+  font-size: $size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+  color: $color-foreground;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-md;
+}
+
+.save {
+  background-color: $color-primary;
+  color: $color-secondary-foreground;
+}
+
+.cancel {
+  background-color: $color-secondary;
+  color: $color-secondary-foreground;
+}
