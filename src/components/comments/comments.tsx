@@ -36,7 +36,7 @@ export const Comments = ({ postId, comments }: Props) => {
       ) : (
         <p className={styles.noComments}>No comments yet. Be the first to comment!</p>
       )}
-      <CommentForm postId={postId} onSubmit={handleAddComment} loading={isLoading} />
+      <CommentForm postId={postId} onCreate={handleAddComment} loading={isLoading} />
     </div>
   )
 }

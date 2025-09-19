@@ -1,1 +1,1 @@
-export { ModalEditPost } from './modal-edit-post.tsx'
+export { ModalCreatePost } from './modal-create-post.tsx'

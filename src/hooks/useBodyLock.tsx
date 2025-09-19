@@ -7,5 +7,8 @@ export const useBodyLock = (isLocked: boolean) => {
     } else {
       document.body.style.overflow = ''
     }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [isLocked])
 }

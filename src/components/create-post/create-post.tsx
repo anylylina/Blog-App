@@ -29,12 +29,9 @@ export const CreatePost = ({ onClose }: Props) => {
   } = useForm<PostFormData>({ resolver: zodResolver(createPostSchema) })
 
   const handleCreatePost = async (data: PostFormData) => {
-    try {
-      setIsLoaded(true)
-      await dispatch(createPost(data))
-    } finally {
-      setIsLoaded(false)
-    }
+    setIsLoaded(true)
+    await dispatch(createPost(data))
+    setIsLoaded(false)
   }
 
   const submitHandler = async (data: PostFormData) => {

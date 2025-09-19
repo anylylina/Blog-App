@@ -6,7 +6,7 @@ import { Button } from '@/ui/button'
 import { useHomePage } from './useHomePage'
 
 const ModalCreatePost = React.lazy(() =>
-  import('@/components/modal-edit-post').then((r) => ({
+  import('@/components/modal-create-post').then((r) => ({
     default: r.ModalCreatePost,
   }))
 )
@@ -16,7 +16,7 @@ const PostViewModal = React.lazy(() =>
   }))
 )
 const ModalEditPost = React.lazy(() =>
-  import('@/components/modal-create-post').then((r) => ({
+  import('@/components/modal-edit-post').then((r) => ({
     default: r.ModalEditPost,
   }))
 )

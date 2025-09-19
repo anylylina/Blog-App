@@ -7,15 +7,15 @@ import styles from './comment-form.module.scss'
 
 type Props = {
   postId: string
-  onSubmit: (author: string, text: string) => void
+  onCreate: (author: string, text: string) => void
   loading?: boolean
 }
 
-export const CommentForm = ({ onSubmit, loading = false }: Props) => {
+export const CommentForm = ({ onCreate, loading = false }: Props) => {
   const [author, setAuthor] = useState('')
   const [text, setText] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     const valueAuthor = author.trim()
@@ -23,7 +23,7 @@ export const CommentForm = ({ onSubmit, loading = false }: Props) => {
 
     if (!valueAuthor || !valueText) return
 
-    onSubmit(valueAuthor, valueText)
+    await onCreate(valueAuthor, valueText)
     setAuthor('')
     setText('')
   }

@@ -30,7 +30,7 @@ export const PostForm = ({ post, onSave, onClose }: Props) => {
       defaultValues: {
         title: post.title,
         author: post.author,
-        imageUrl: post.imageUrl,
+        imageUrl: post.imageUrl || '',
         description: post.description,
         text: post.text,
       },
