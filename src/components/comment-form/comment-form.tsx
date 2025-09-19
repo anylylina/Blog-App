@@ -23,7 +23,7 @@ export const CommentForm = ({ onSubmit, loading = false }: Props) => {
 
     if (!valueAuthor || !valueText) return
 
-    onSubmit(valueText, valueText)
+    onSubmit(valueAuthor, valueText)
     setAuthor('')
     setText('')
   }

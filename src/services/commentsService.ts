@@ -43,8 +43,6 @@ export const addComment = async (
   commentData: CommentFormData
 ): Promise<Comment> => {
   try {
-    throw new Error('Not implemented')
-
     const date = new Date()
 
     const newComment = {

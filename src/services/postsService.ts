@@ -35,6 +35,7 @@ export const createPost = async (newPost: PostFormData) => {
       ...newPost,
       updatedAt: dateToTimestamp(now),
       createdAt: dateToTimestamp(now),
+      commentsCount: 0,
     }
 
     const docRef = await addDoc(collection(db, 'posts'), post)

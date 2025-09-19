@@ -54,10 +54,6 @@ export const CreatePost = ({ onClose }: Props) => {
       </div>
 
       <div className={styles.field}>
-        <Input {...register('category')} placeholder="Category" error={errors.category?.message} />
-      </div>
-
-      <div className={styles.field}>
         <Textarea
           {...register('description')}
           placeholder="Post description"

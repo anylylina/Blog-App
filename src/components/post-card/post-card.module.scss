@@ -25,6 +25,7 @@
   font-size: $size-lg;
   font-weight: $font-weight-bold;
   color: $color-foreground;
+  @include ellipsis(2);
 }
 
 .text {

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { Modal } from '@/components/modal/modal.tsx'
+import { Modal } from '@/components/modal'
 import { Comments } from '@/components/comments'
 
 import type { Post } from '@/types/post'

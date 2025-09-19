@@ -1,4 +1,4 @@
-import { Modal } from '@/components/modal/modal'
+import { Modal } from '@/components/modal'
 import { PostForm } from '@/components/post-form'
 import type { Post } from '@/types/post.ts'
 import type { PostFormData } from '@/schemas/createPostSchema.ts'

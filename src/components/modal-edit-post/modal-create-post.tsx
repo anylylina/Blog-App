@@ -1,4 +1,4 @@
-import { Modal } from '@/components/modal/modal'
+import { Modal } from '@/components/modal'
 import { PostForm } from '@/components/post-form'
 import { useAppDispatch } from '@/store'
 import { createPost } from '@/store/slices/postSlice.ts'
